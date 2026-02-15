@@ -1,0 +1,61 @@
+id,text,source,event_type,entity,certainty,market_direction,label_source,market_moving
+fx-001,"Idris Calloway ruled out for Kestrel Athletic with a hamstring injury, out four weeks.",club_official,injury,Idris Calloway,confirmed,down,human,1
+fx-002,"FULL TIME. HARBOR CITY 2-1 AWAY, A ROUTINE WIN IN FRONT OF A MODEST CROWD.",wire_desk,result,Harbor City,confirmed,neutral,human,0
+fx-003,"Dario Ketteridge limped off with an ankle strain, doubtful for Copperfield on Saturday.",beat_reporter,injury,Dario Ketteridge,likely,down,human,1
+fx-004,"What a day for the club, love this squad, Dario Ketteridge was great in training pics.",fan_account,other,Dario Ketteridge,confirmed,neutral,human,0
+fx-005,Emil Dravic handed a three match suspension after the red card against Harbor City.,wire_desk,suspension,Emil Dravic,confirmed,down,human,1
+fx-006,Hearing whispers Bastian Loewe could be linked with Copperfield but nothing concrete at all.,aggregator,rumor,Bastian Loewe,rumor,neutral,human,0
+fx-007,Harbor City complete the signing of Lucan Ferreby on a four year deal.,club_official,trade,Lucan Ferreby,confirmed,up,human,1
+fx-008,"Anyone going to the Ashford Wanderers game? Tickets are cheap, pub afterwards.",fan_account,other,Ashford Wanderers,confirmed,neutral,human,0
+fx-009,Team news. Joaquin Brantley returns to the starting eleven for Northvale United.,club_official,lineup,Joaquin Brantley,confirmed,up,human,1
+fx-010,"Match report. Northvale United ground out a draw, Lucan Ferreby had a quiet afternoon.",beat_reporter,result,Lucan Ferreby,confirmed,neutral,human,0
+fx-011,"Ravi Stanhope expected to sit out, Ashford Wanderers rest key players ahead of the cup tie.",beat_reporter,lineup,Ravi Stanhope,likely,down,human,1
+fx-012,"Throwback to when Tomas Verrill scored that long range goal for Dunmore Albion, great memories.",aggregator,other,Tomas Verrill,likely,neutral,human,0
+fx-013,"Ironbridge FC captain Dario Ketteridge undergoes knee surgery, season over.",wire_desk,injury,Dario Ketteridge,confirmed,down,human,1
+fx-014,"Mate says Silas Ormerod might be injured? No source, probably nothing.",fan_account,rumor,Silas Ormerod,rumor,neutral,human,0
+fx-015,Tomas Verrill set to leave Dunmore Albion after agreeing terms elsewhere.,beat_reporter,trade,Tomas Verrill,likely,down,human,1
+fx-016,"Kit launch for next season, now on sale at the Ashford Wanderers store.",club_official,other,Ashford Wanderers,confirmed,neutral,human,0
+fx-017,"Tomas Verrill ruled out for Ironbridge FC with a hamstring injury, out four weeks.",club_official,injury,Tomas Verrill,confirmed,down,human,1
+fx-018,"Full time. Copperfield 2-1 away, a routine win in front of a modest crowd.",wire_desk,result,Copperfield,confirmed,neutral,human,0
+fx-019,"Nikos Varga limped off with an ankle strain, doubtful for Kestrel Athletic on Saturday.",beat_reporter,injury,Nikos Varga,likely,down,human,1
+fx-020,"What a day for the club, love this squad, Anders Pohlmann was great in training pics.",fan_account,other,Anders Pohlmann,confirmed,neutral,human,0
+fx-021,Misha Oranov handed a three match suspension after the red card against Copperfield.,wire_desk,suspension,Misha Oranov,confirmed,down,human,1
+fx-022,HEARING WHISPERS DARIO KETTERIDGE COULD BE LINKED WITH DUNMORE ALBION BUT NOTHING CONCRETE AT ALL.,aggregator,rumor,Dario Ketteridge,rumor,neutral,human,0
+fx-023,Copperfield complete the signing of Anders Pohlmann on a four year deal.,club_official,trade,Anders Pohlmann,confirmed,up,human,1
+fx-024,"Anyone going to the Kestrel Athletic game? Tickets are cheap, pub afterwards.",fan_account,other,Kestrel Athletic,confirmed,neutral,human,0
+fx-025,Team news. Dario Ketteridge returns to the starting eleven for Dunmore Albion.,club_official,lineup,Dario Ketteridge,confirmed,up,human,1
+fx-026,"Match report. Ironbridge FC ground out a draw, Emil Dravic had a quiet afternoon.",beat_reporter,result,Emil Dravic,confirmed,neutral,human,0
+fx-027,"Idris Calloway expected to sit out, Northvale United rest key players ahead of the cup tie.",beat_reporter,lineup,Idris Calloway,likely,down,human,1
+fx-028,"Throwback to when Ravi Stanhope scored that long range goal for Northvale United, great memories.",aggregator,other,Ravi Stanhope,likely,neutral,human,0
+fx-029,"Harbor City captain Emil Dravic undergoes knee surgery, season over.",wire_desk,injury,Emil Dravic,confirmed,down,human,1
+fx-030,"Mate says Emil Dravic might be injured? No source, probably nothing.",fan_account,rumor,Emil Dravic,rumor,neutral,human,0
+fx-031,Kofi Merriweather set to leave Copperfield after agreeing terms elsewhere.,beat_reporter,trade,Kofi Merriweather,likely,down,human,1
+fx-032,"Kit launch for next season, now on sale at the Silverlake Town store.",club_official,other,Silverlake Town,confirmed,neutral,human,0
+fx-033,"Kofi Merriweather ruled out for Dunmore Albion with a hamstring injury, out four weeks.",club_official,injury,Kofi Merriweather,confirmed,down,human,1
+fx-034,"Full time. Brightwater 2-1 away, a routine win in front of a modest crowd.",wire_desk,result,Brightwater,confirmed,neutral,human,0
+fx-035,"Idris Calloway limped off with an ankle strain, doubtful for Redmoor Rovers on Saturday.",beat_reporter,injury,Idris Calloway,likely,down,human,1
+fx-036,"What a day for the club, love this squad, Lucan Ferreby was great in training pics.",fan_account,other,Lucan Ferreby,confirmed,neutral,human,0
+fx-037,Teodor Wrenn handed a three match suspension after the red card against Ironbridge FC.,wire_desk,suspension,Teodor Wrenn,confirmed,down,human,1
+fx-038,Hearing whispers Dario Ketteridge could be linked with Dunmore Albion but nothing concrete at all.,aggregator,rumor,Dario Ketteridge,rumor,neutral,human,0
+fx-039,Copperfield complete the signing of Anders Pohlmann on a four year deal.,club_official,trade,Anders Pohlmann,confirmed,up,human,1
+fx-040,"Anyone going to the Silverlake Town game? Tickets are cheap, pub afterwards.",fan_account,other,Silverlake Town,confirmed,neutral,human,0
+fx-041,Team news. Teodor Wrenn returns to the starting eleven for Brightwater.,club_official,lineup,Teodor Wrenn,confirmed,up,human,1
+fx-042,"MATCH REPORT. DUNMORE ALBION GROUND OUT A DRAW, ANDERS POHLMANN HAD A QUIET AFTERNOON.",beat_reporter,result,Anders Pohlmann,confirmed,neutral,human,0
+fx-043,"Dario Ketteridge expected to sit out, Northvale United rest key players ahead of the cup tie.",beat_reporter,lineup,Dario Ketteridge,likely,down,human,1
+fx-044,"Throwback to when Ravi Stanhope scored that long range goal for Ashford Wanderers, great memories.",aggregator,other,Ravi Stanhope,likely,neutral,human,0
+fx-045,"Silverlake Town captain Misha Oranov undergoes knee surgery, season over.",wire_desk,injury,Misha Oranov,confirmed,down,human,1
+fx-046,"Mate says Misha Oranov might be injured? No source, probably nothing.",fan_account,rumor,Misha Oranov,rumor,neutral,human,0
+fx-047,Joaquin Brantley set to leave Harbor City after agreeing terms elsewhere.,beat_reporter,trade,Joaquin Brantley,likely,down,human,1
+fx-048,"Kit launch for next season, now on sale at the Northvale United store.",club_official,other,Northvale United,confirmed,neutral,human,0
+fx-049,"Callum Hasket ruled out for Copperfield with a hamstring injury, out four weeks.",club_official,injury,Callum Hasket,confirmed,down,human,1
+fx-050,"Full time. Silverlake Town 2-1 away, a routine win in front of a modest crowd.",wire_desk,result,Silverlake Town,confirmed,neutral,human,0
+fx-051,"Idris Calloway limped off with an ankle strain, doubtful for Silverlake Town on Saturday.",beat_reporter,injury,Idris Calloway,likely,down,human,1
+fx-052,"What a day for the club, love this squad, Emil Dravic was great in training pics.",fan_account,other,Emil Dravic,confirmed,neutral,human,0
+fx-053,Emil Dravic handed a three match suspension after the red card against Brightwater.,wire_desk,suspension,Emil Dravic,confirmed,down,human,1
+fx-054,Hearing whispers Dario Ketteridge could be linked with Northvale United but nothing concrete at all.,aggregator,rumor,Dario Ketteridge,rumor,neutral,human,0
+fx-055,Brightwater complete the signing of Anders Pohlmann on a four year deal.,club_official,trade,Anders Pohlmann,confirmed,up,human,1
+fx-056,"Anyone going to the Northvale United game? Tickets are cheap, pub afterwards.",fan_account,other,Northvale United,confirmed,neutral,human,0
+fx-057,Team news. Tomas Verrill returns to the starting eleven for Redmoor Rovers.,club_official,lineup,Tomas Verrill,confirmed,up,human,1
+fx-058,"Match report. Dunmore Albion ground out a draw, Silas Ormerod had a quiet afternoon.",beat_reporter,result,Silas Ormerod,confirmed,neutral,human,0
+fx-059,"Silas Ormerod expected to sit out, Brightwater rest key players ahead of the cup tie.",beat_reporter,lineup,Silas Ormerod,likely,down,human,1
+fx-060,"Throwback to when Anders Pohlmann scored that long range goal for Ashford Wanderers, great memories.",aggregator,other,Anders Pohlmann,likely,neutral,human,0
