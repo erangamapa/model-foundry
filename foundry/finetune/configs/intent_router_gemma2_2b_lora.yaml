@@ -1,0 +1,22 @@
+name: intent-router-gemma2-2b
+task: intent_router
+base_model: google/gemma-2-2b-it
+seed: 13
+output_dir: artifacts/intent-router-gemma2-2b
+data:
+  train_path: data/splits/intents_train.jsonl
+  dev_path: data/splits/intents_dev.jsonl
+lora:
+  r: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, o_proj]
+training:
+  epochs: 3
+  learning_rate: 0.0002
+  lr_scheduler: cosine
+  warmup_ratio: 0.03
+  per_device_batch_size: 16
+  gradient_accumulation_steps: 2
+  max_seq_length: 256
+  packing: false
