@@ -1,0 +1,28 @@
+name: tweet-classifier-qwen25-15b
+task: tweet_classifier
+base_model: Qwen/Qwen2.5-1.5B-Instruct
+seed: 13
+output_dir: artifacts/tweet-classifier-qwen25-15b
+data:
+  train_path: data/splits/tweets_train.jsonl
+  dev_path: data/splits/tweets_dev.jsonl
+quantization:
+  load_in_4bit: true
+  quant_type: nf4
+  compute_dtype: bfloat16
+  double_quant: true
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, o_proj]
+training:
+  epochs: 3
+  learning_rate: 0.0002
+  lr_scheduler: cosine
+  warmup_ratio: 0.03
+  per_device_batch_size: 8
+  gradient_accumulation_steps: 4
+  max_seq_length: 512
+  packing: false
+  weight_decay: 0.01

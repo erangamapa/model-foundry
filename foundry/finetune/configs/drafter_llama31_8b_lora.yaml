@@ -1,0 +1,28 @@
+name: drafter-llama31-8b
+task: drafter
+base_model: meta-llama/Llama-3.1-8B-Instruct
+seed: 13
+output_dir: artifacts/drafter-llama31-8b
+data:
+  train_path: data/splits/drafter_settled_bets_train.jsonl
+  dev_path: data/splits/drafter_settled_bets_dev.jsonl
+quantization:
+  load_in_4bit: true
+  quant_type: nf4
+  compute_dtype: bfloat16
+  double_quant: true
+lora:
+  r: 32
+  alpha: 64
+  dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+training:
+  epochs: 2
+  learning_rate: 0.0001
+  lr_scheduler: cosine
+  warmup_ratio: 0.05
+  per_device_batch_size: 2
+  gradient_accumulation_steps: 16
+  max_seq_length: 1536
+  packing: false
+  weight_decay: 0.01
