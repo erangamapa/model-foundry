@@ -1,0 +1,10 @@
+base_model: microsoft/deberta-v3-small
+train_path: data/splits/injection_train.jsonl
+dev_path: data/splits/injection_dev.jsonl
+output_dir: artifacts/injection-deberta-v3-small
+seed: 13
+max_length: 256
+epochs: 10
+learning_rate: 0.00002
+batch_size: 32
+early_stopping_patience: 2
