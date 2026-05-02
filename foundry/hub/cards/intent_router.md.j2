@@ -1,0 +1,6 @@
+{% extends "_base.md.j2" %}
+{% set task_tag = "text-classification" %}
+{% block summary %}A LoRA adapter on {{ base_model }} that routes a customer message to one intent name.{% endblock %}
+{% block intended_use %}Choosing which downstream agent handles a message. Unknown intents fall back to other.{% endblock %}
+{% block training_data %}Customer style messages with one intent each, written and reviewed by hand.{% endblock %}
+{% block limits %}Short ambiguous messages are often routed to other. The router never places a bet itself.{% endblock %}

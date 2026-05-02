@@ -1,0 +1,6 @@
+{% extends "_base.md.j2" %}
+{% set task_tag = "text-generation" %}
+{% block summary %}A LoRA adapter on {{ base_model }} that turns a structured signal into a short bet brief.{% endblock %}
+{% block intended_use %}Drafting a brief for a customer from a signal object. A human or a policy check reviews the draft before it is sent.{% endblock %}
+{% block training_data %}Settled bets and closing line moves paired with briefs that passed review.{% endblock %}
+{% block limits %}The model can restate numbers wrongly. Every price and stake in a draft must be checked against the signal before it is shown.{% endblock %}
