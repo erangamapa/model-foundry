@@ -1,0 +1,39 @@
+---
+base_model: {{ base_model }}
+library_name: {{ library_name }}
+license: apache-2.0
+tags:
+  - {{ task_tag }}
+  - sportsbook
+---
+
+# {{ model_id }}
+
+{% block summary %}{% endblock %}
+
+## Intended use
+
+{% block intended_use %}{% endblock %}
+
+## Training data
+
+{% block training_data %}{% endblock %}
+The run used {{ training_rows }} training rows and {{ dev_rows }} dev rows with seed {{ seed }}. All example text in the public fixtures is synthetic.
+
+## Evaluation
+
+These numbers come from the metrics file of the training run. A model only ships after it passes the evalgate suite, and this table does not replace that gate.
+
+| Metric | Value |
+| --- | --- |
+{% for name, value in metrics.items() -%}
+| {{ name }} | {{ "%.3f"|format(value) }} |
+{% endfor %}
+## Bias and limits
+
+{% block limits %}{% endblock %}
+Labels came from a teacher model with a human audit of a sample. Teacher mistakes can be copied by the student. Coverage of smaller leagues and non English posts is thin.
+
+## Files
+
+Weights are stored as safetensors only. Pickle based formats are never uploaded.
