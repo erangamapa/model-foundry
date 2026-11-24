@@ -1,0 +1,6 @@
+{% extends "_base.md.j2" %}
+{% set task_tag = "tweet-classification" %}
+{% block summary %}A LoRA adapter on {{ base_model }} that reads a sports news post and returns event type, entity, certainty and market direction as JSON.{% endblock %}
+{% block intended_use %}Triage of inbound sports news before any frontier model sees it. Low confidence output should be escalated, not trusted.{% endblock %}
+{% block training_data %}Posts from the news ingest feed labeled by a teacher model, with a human audited sample.{% endblock %}
+{% block limits %}The adapter was trained on a fixed label set and will force unfamiliar events into the nearest class. It is not for settling bets or moving prices on its own.{% endblock %}

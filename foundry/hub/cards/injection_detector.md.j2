@@ -1,0 +1,6 @@
+{% extends "_base.md.j2" %}
+{% set task_tag = "prompt-injection" %}
+{% block summary %}A small encoder fine tuned from {{ base_model }} that scores inbound text for prompt injection.{% endblock %}
+{% block intended_use %}A fast guard in front of agents that read untrusted text. A positive score blocks or escalates the text.{% endblock %}
+{% block training_data %}Benign sports posts mixed with synthetic and public style injection strings.{% endblock %}
+{% block limits %}Novel attack phrasing can slip past. Treat the score as one layer, not the only defense.{% endblock %}
