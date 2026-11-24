@@ -1,0 +1,12 @@
+# Dedicated launch for the tweet classifier when it needs its own GPU slice.
+model: Qwen/Qwen2.5-1.5B-Instruct
+served_model_name: qwen25-15b-tweets
+dtype: bfloat16
+gpu_memory_utilization: 0.4
+max_model_len: 1024
+port: 8001
+enable_lora: true
+max_loras: 1
+max_lora_rank: 16
+lora_modules:
+  tweet-classifier: artifacts/tweet-classifier-qwen25-15b/adapter
