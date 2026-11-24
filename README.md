@@ -1,6 +1,6 @@
 # model-foundry
 
-I train and ship the cheaper rungs of the model ladder. This repo is where a task leaves the paid frontier tier and lands on something small, fast and measured.
+Most LLM workloads send everything to the biggest model. This repo is a ladder of cheaper models for the tasks that do not need one, with the training code, the data pipeline and the release rule for each rung. I built it for a sportsbook platform, so the worked example is tweet triage, prompt injection detection and bet briefs. I train and ship the cheaper rungs of the model ladder. This repo is where a task leaves the paid frontier tier and lands on something small, fast and measured.
 
 The thesis is simple. Never send work to an expensive model that a cheaper rung handles. Rules first, then classical ML, then small encoders, then fine tuned small LLMs, then paid frontier models.
 
@@ -81,9 +81,11 @@ No rung ships without passing evalgate. Training metrics in a model card are not
 
 ## Setup
 
-The shared types come from sportsbook-contracts. Install it first.
+The shared types come from sportsbook-contracts. Clone it next to this repo and install it first.
 
 ```
+git clone https://github.com/erangamapa/sportsbook-contracts ../sportsbook-contracts
+python3.11 -m venv .venv && . .venv/bin/activate
 pip install -e ../sportsbook-contracts/packages/py
 pip install -e '.[dev]'
 ruff check .
