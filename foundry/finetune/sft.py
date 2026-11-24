@@ -47,6 +47,8 @@ def run(config: TrainConfig) -> Path:
     pin_seeds(config.seed)
 
     compute_dtype = torch.bfloat16
+    if config.quantization is None and torch.backends.mps.is_available():
+        compute_dtype = torch.float32
     if config.quantization is not None:
         compute_dtype = getattr(torch, config.quantization.compute_dtype)
     quantization = None
@@ -64,8 +66,9 @@ def run(config: TrainConfig) -> Path:
     model = AutoModelForCausalLM.from_pretrained(
         config.base_model,
         quantization_config=quantization,
-        torch_dtype=compute_dtype,
+        dtype=compute_dtype,
         use_safetensors=True,
+        attn_implementation='eager' if 'gemma' in config.base_model.lower() else None,
     )
 
     train = Dataset.from_list(build_chat_rows(config, config.data.train_path))
@@ -77,7 +80,7 @@ def run(config: TrainConfig) -> Path:
         num_train_epochs=settings.epochs,
         learning_rate=settings.learning_rate,
         lr_scheduler_type=settings.lr_scheduler,
-        warmup_ratio=settings.warmup_ratio,
+        warmup_steps=settings.warmup_ratio,
         weight_decay=settings.weight_decay,
         per_device_train_batch_size=settings.per_device_batch_size,
         gradient_accumulation_steps=settings.gradient_accumulation_steps,
@@ -87,7 +90,6 @@ def run(config: TrainConfig) -> Path:
         data_seed=config.seed,
         eval_strategy='epoch',
         save_strategy='epoch',
-        save_safetensors=True,
         bf16=compute_dtype is torch.bfloat16,
         fp16=compute_dtype is torch.float16,
         report_to='none',

@@ -37,6 +37,7 @@ def read_rows(path: Path) -> list[dict]:
 
 def run(config: InjectionConfig) -> Path:
     import numpy as np
+    import torch
     from datasets import Dataset
     from sklearn.metrics import f1_score
     from transformers import (
@@ -51,7 +52,7 @@ def run(config: InjectionConfig) -> Path:
     set_seed(config.seed)
     tokenizer = AutoTokenizer.from_pretrained(config.base_model)
     model = AutoModelForSequenceClassification.from_pretrained(
-        config.base_model, num_labels=2, use_safetensors=True
+        config.base_model, num_labels=2, use_safetensors=True, dtype=torch.float32
     )
 
     def encode(rows: list[dict]) -> Dataset:
@@ -78,7 +79,6 @@ def run(config: InjectionConfig) -> Path:
         load_best_model_at_end=True,
         metric_for_best_model='f1',
         save_total_limit=1,
-        save_safetensors=True,
         seed=config.seed,
         data_seed=config.seed,
         report_to='none',
