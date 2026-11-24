@@ -7,3 +7,4 @@ __pycache__/
 /sportsbook-contracts/
 /artifacts/
 *.joblib
+data/splits/
