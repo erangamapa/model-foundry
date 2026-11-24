@@ -1,0 +1,12 @@
+# One base model serves several task adapters. Requests pick an adapter by name.
+model: Qwen/Qwen2.5-1.5B-Instruct
+served_model_name: qwen25-15b
+dtype: bfloat16
+gpu_memory_utilization: 0.85
+max_model_len: 2048
+port: 8000
+enable_lora: true
+max_loras: 4
+max_lora_rank: 32
+lora_modules:
+  tweet-classifier: artifacts/tweet-classifier-qwen25-15b/adapter
