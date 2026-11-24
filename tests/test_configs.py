@@ -19,12 +19,12 @@ def test_every_train_config_parses(path: Path) -> None:
 
 
 def test_tweet_recipe_matches_the_brief() -> None:
-    config = load_config(CONFIG_DIR / 'tweet_classifier_qwen25_15b_qlora.yaml')
+    config = load_config(CONFIG_DIR / 'tweet_classifier_qwen25_15b_lora.yaml')
     assert config.base_model == 'Qwen/Qwen2.5-1.5B-Instruct'
-    assert config.quantization is not None and config.quantization.quant_type == 'nf4'
+    assert config.quantization is None
     assert (config.lora.r, config.lora.alpha) == (16, 32)
     assert config.lora.target_modules == ['q_proj', 'k_proj', 'v_proj', 'o_proj']
-    assert config.training.epochs == 3
+    assert config.training.epochs == 5
     assert config.training.lr_scheduler == 'cosine'
 
 
