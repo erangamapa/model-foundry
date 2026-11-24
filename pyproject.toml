@@ -16,13 +16,13 @@ dependencies = [
   "scikit-learn>=1.4",
   "numpy>=1.26",
   "jinja2>=3.1",
-  "sportsbook-contracts",
+  "sportsbook-contracts @ git+https://github.com/erangamapa/sportsbook-contracts@v0.1.0#subdirectory=packages/py",
 ]
 
 [project.optional-dependencies]
 train = [
   "torch>=2.3",
-  "transformers>=4.44",
+  "transformers>=5.0",
   "peft>=0.12",
   "trl>=0.20",
   "bitsandbytes>=0.43",
@@ -33,6 +33,9 @@ label = ["anthropic>=0.40", "openai>=1.50"]
 serve = ["vllm>=0.6"]
 hub = ["huggingface-hub>=0.24"]
 dev = ["pytest>=8", "ruff>=0.5"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["foundry"]
